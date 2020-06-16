@@ -1,0 +1,77 @@
+# ---------------------------------------------------
+# Author    :  Benjamin Kataliko Viranga
+# Community :  Stunt Business
+# Community website : www.stuntbusiness.com
+#
+# 30 Days - Q&A Python Basic
+# Day 29 : 19-06-2020
+# Day 29 | IG : https://www.instagram.com/benjivrik/
+# Subject : Challenge XV - Counter of clicks
+#----------------------------------------------------
+# what would be the output of this program ?
+
+
+import tkinter as tk
+
+# counter value
+counter = 0
+
+def clicked():
+    global counter
+    counter += 1
+    text_field['text'] = 'You clicked: ' + str(counter)
+
+
+# initialize your tkinter object
+window = tk.Tk()
+window.resizable(False,False)
+window.geometry("600x400")
+window.title("First GUI.")
+
+# create frame
+frame = tk.Frame(window, width=600, height=300, background="white")
+frame.pack(side=tk.TOP)
+
+# create frame bottom
+frame_bottom = tk.Frame(window, width=600, height=100, background="white")
+frame_bottom.pack(side= tk.TOP)
+
+canvas = tk.Canvas(frame, width=200,height=300, bg="white",bd=1, highlightthickness=0,relief="solid")
+canvas.pack(side=tk.LEFT,fill='both', expand='yes',padx=5,pady=5)
+
+img = tk.PhotoImage(file="img_data/android-chrome-192x192.png")
+canvas.create_image(100, 150, anchor=tk.CENTER, image=img)
+#right canvas
+canvas_right = tk.Canvas(frame, width=400,height=300, bd=1, highlightthickness=0,relief="solid")
+canvas_right.pack(side=tk.RIGHT ,fill=tk.BOTH, expand='yes',padx=5,pady=5)
+
+
+# text canvas
+text = '''
+Counter 
+'''
+
+# b = Button(root, text="Click Me", command=clicked)
+# b.pack()
+
+text_field = tk.Label(canvas_right, text="No clicks yet.")
+text_field.pack()
+
+canvas_right.create_window(200,150, anchor=tk.CENTER, window=text_field)
+
+#bottom canvas
+canvas_right = tk.Canvas(window, width=600, height=300, bd=1, highlightthickness=0,relief="solid")
+canvas_right.pack(side=tk.BOTTOM ,fill='both', expand='yes')
+
+
+# add entries in the bottom frame
+
+canvas_frame_bottom = tk.Canvas(frame_bottom, width=600, height=100, bd=1, highlightthickness=0,relief="solid")
+canvas_frame_bottom.pack(fill='both',expand='yes',padx=5,pady=2)
+
+# click me
+click_button = tk.Button(canvas_frame_bottom, text="Click Me",fg="white",bg="purple",width=200,height=15,relief=tk.SOLID,bd=1, command=clicked)
+click_button.pack()
+
+# window
+window.mainloop()

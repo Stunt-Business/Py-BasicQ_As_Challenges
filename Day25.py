@@ -4,8 +4,8 @@
 # Community website : www.stuntbusiness.com
 #
 # 30 Days - Q&A Python Basic
-# Day 20 : 15-06-2020
-# Day 20 | IG : https://www.instagram.com/benjivrik/
+# Day 25 : 15-06-2020
+# Day 25 | IG : https://www.instagram.com/benjivrik/
 # Subject : Challenge XII - Create a Customer using OOP
 #----------------------------------------------------
 # what would be the output of this program ?
@@ -53,6 +53,8 @@ class Customer:
         if (sum > self.__budget):
             print("\nYou do not have enough money to pay this bill.")
             print("Your budget is ${}.\n".format(self.__budget))
+        else:
+            print("You are good to go. Your bugdet is ${}.\n".format(self.__budget))
         
         return "Your current bill is ${}.".format(sum)
     
