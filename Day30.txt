@@ -16,7 +16,7 @@
     Use the file Manager from Day24 and 
     write the data you read from the entries inside a text file.
 
-    Add a field for the first name, the last name and the phone number.
+    Add a field for the first name, the last name and a phone number.
 
     Take the code from the Day28 and add the File Manager.
     
