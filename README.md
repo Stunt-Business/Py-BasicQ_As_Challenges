@@ -2,6 +2,7 @@
 Basic Q&amp;A challenges launched from the community member in Instagram : https://www.instagram.com/benjivrik/
 
 Day 1 : Introduction | 22-05-2020
+
 Day 2 : Data Type. | 23-05-2020
 Day 3 : Challenge 1 | 24-05-2020
 Day 4 : list | 25-05-2020
